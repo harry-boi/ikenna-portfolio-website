@@ -1,10 +1,21 @@
 import React from "react";
+import { motion } from "framer-motion";
+import {
+  fadeInUp,
+  fadeIn,
+  staggerContainer,
+  scaleInOut,
+} from "../utils/animation";
 
 const About = () => {
   return (
-    <section
+    <motion.section
       id="about"
       className="relative py-20 lg:py-32 bg-[#0A0A0A] text-white overflow-hidden"
+      variants={staggerContainer}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, amount: 0.2 }}
     >
       {/* Background Glow Effects */}
       <div className="absolute -top-20 -left-20 w-72 h-72 bg-gray-900/20 rounded-full blur-3xl"></div>
@@ -13,7 +24,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column - Text Content */}
-          <div className="space-y-8">
+          <motion.div className="space-y-8" variants={fadeInUp}>
             <div className="space-y-4">
               <h2 className="text-3xl lg:text-4xl font-semibold text-white">
                 Visionary Leader & Community Advocate
@@ -21,14 +32,16 @@ const About = () => {
               <div className="w-20 h-[1px] bg-gray-700"></div>
             </div>
 
-            <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
+            <motion.div
+              className="space-y-6 text-lg text-gray-400 leading-relaxed"
+              variants={fadeInUp}
+            >
               <p>
                 Ikenna Nwachukwu is the visionary Founder and CEO of Afro
                 Socialite Incorporated, a multicultural platform dedicated to
                 promoting community wellness, cultural inclusion, and social
                 empowerment.
               </p>
-
               <p>
                 Based in South Australia, Ikenna brings together a wealth of
                 professional experience, international exposure, and an
@@ -36,16 +49,18 @@ const About = () => {
                 by his deep commitment to humanity, philanthropy, and community
                 development.
               </p>
-
               <p>
                 His mission is to bridge cultures, reduce social isolation, and
                 create platforms where people from all walks of life can
                 connect, thrive, and be celebrated.
               </p>
-            </div>
+            </motion.div>
 
             {/* Key Highlights */}
-            <div className="grid grid-cols-2 gap-4 pt-4">
+            <motion.div
+              className="grid grid-cols-2 gap-4 pt-4"
+              variants={fadeInUp}
+            >
               <div className="text-center p-4 bg-[#111111] rounded-lg border border-gray-800/50">
                 <div className="text-2xl font-semibold text-white mb-2">3</div>
                 <div className="text-sm text-gray-400">Continents Lived</div>
@@ -54,15 +69,18 @@ const About = () => {
                 <div className="text-2xl font-semibold text-white mb-2">3</div>
                 <div className="text-sm text-gray-400">Degrees Earned</div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right Column - Visual Elements */}
-          <div className="relative">
+          <motion.div className="relative" variants={scaleInOut}>
             {/* Main Card */}
             <div className="bg-[#111111] p-8 rounded-lg border border-gray-800/50">
               <div className="space-y-6">
-                <div className="flex items-center space-x-4">
+                <motion.div
+                  className="flex items-center space-x-4"
+                  variants={fadeInUp}
+                >
                   <div className="w-12 h-12 bg-[#1A1A1A] rounded-lg flex items-center justify-center text-gray-400">
                     <svg
                       className="w-6 h-6"
@@ -84,9 +102,12 @@ const About = () => {
                       Bridge cultures and reduce social isolation
                     </p>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="flex items-center space-x-4">
+                <motion.div
+                  className="flex items-center space-x-4"
+                  variants={fadeInUp}
+                >
                   <div className="w-12 h-12 bg-[#1A1A1A] rounded-lg flex items-center justify-center text-gray-400">
                     <svg
                       className="w-6 h-6"
@@ -102,9 +123,12 @@ const About = () => {
                       Connected communities are stronger communities
                     </p>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="flex items-center space-x-4">
+                <motion.div
+                  className="flex items-center space-x-4"
+                  variants={fadeInUp}
+                >
                   <div className="w-12 h-12 bg-[#1A1A1A] rounded-lg flex items-center justify-center text-gray-400">
                     <svg
                       className="w-6 h-6"
@@ -124,17 +148,17 @@ const About = () => {
                       Promoting wellness and cultural inclusion
                     </p>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
 
             {/* Subtle Background Elements */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-gray-900/20 rounded-full blur-2xl"></div>
             <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gray-900/20 rounded-full blur-xl"></div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

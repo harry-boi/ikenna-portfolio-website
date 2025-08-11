@@ -1,4 +1,11 @@
 import React from "react";
+import { motion } from "framer-motion";
+import {
+  fadeIn,
+  fadeInUp,
+  staggerContainer,
+  scaleInOut,
+} from "../utils/animation";
 
 const CoreValues = () => {
   const values = [
@@ -37,7 +44,7 @@ const CoreValues = () => {
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
+            d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0z"
           />
         </svg>
       ),
@@ -77,7 +84,7 @@ const CoreValues = () => {
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
+            d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0z"
           />
         </svg>
       ),
@@ -97,7 +104,7 @@ const CoreValues = () => {
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
+            d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3"
           />
         </svg>
       ),
@@ -126,9 +133,15 @@ const CoreValues = () => {
 
   return (
     <section id="values" className="py-20 lg:py-32 bg-[#0A0A0A] text-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div variants={fadeInUp} className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-extrabold text-white mb-4">
             Core Values & Driving Passion
           </h2>
@@ -137,14 +150,17 @@ const CoreValues = () => {
             personal and professional journey
           </p>
           <div className="w-20 h-[1px] bg-gray-700 mx-auto mt-8"></div>
-        </div>
+        </motion.div>
 
         {/* Values Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {values.map((value, index) => (
-            <div
+            <motion.div
               key={index}
-              className="group bg-[#111111] rounded-lg p-8 border border-gray-800/50 hover:border-gray-700 transition-all duration-500 backdrop-blur-sm"
+              variants={fadeInUp}
+              whileHover={{ y: -6, scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 200, damping: 15 }}
+              className="group bg-[#111111] rounded-lg p-8 border border-gray-800/50 hover:border-gray-700 hover:shadow-lg hover:shadow-gray-900/40 transition-all duration-500 backdrop-blur-sm"
             >
               {/* Icon */}
               <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 mb-6 group-hover:text-white group-hover:bg-gray-700 transition-all duration-300">
@@ -159,15 +175,15 @@ const CoreValues = () => {
                 {value.description}
               </p>
 
-              {/* Hover Effect */}
+              {/* Hover line */}
               <div className="h-[1px] bg-gray-800 w-full mt-6 group-hover:bg-gray-700 transition-colors duration-300"></div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-[#111111] rounded-lg p-8 border border-gray-800/50 max-w-2xl mx-auto backdrop-blur-sm">
+        <motion.div variants={fadeInUp} className="text-center mt-16">
+          <div className="bg-[#111111] rounded-lg p-8 border border-gray-800/50 max-w-2xl mx-auto backdrop-blur-sm hover:border-gray-700 transition-all duration-300">
             <h3 className="text-2xl font-semibold text-white mb-4">
               Ready to Make a Difference?
             </h3>
@@ -195,8 +211,8 @@ const CoreValues = () => {
               </svg>
             </a>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
