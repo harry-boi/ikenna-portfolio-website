@@ -37,13 +37,13 @@ const About = () => {
               variants={fadeInUp}
             >
               <p>
-                Ikenna Nwachukwu is the visionary Founder and CEO of Afro
-                Socialite Incorporated, a multicultural platform dedicated to
-                promoting community wellness, cultural inclusion, and social
+                Ikenna Kingsley Nwachukwu is the visionary Founder and CEO of
+                Afro Socialite Incorporated, a multicultural platform dedicated
+                to promoting community wellness, cultural inclusion, and social
                 empowerment.
               </p>
               <p>
-                Based in South Australia, Ikenna brings together a wealth of
+                Based in Australia, Ikenna brings together a wealth of
                 professional experience, international exposure, and an
                 unwavering passion for creating positive social change. Guided
                 by his deep commitment to humanity, philanthropy, and community
@@ -62,7 +62,7 @@ const About = () => {
               variants={fadeInUp}
             >
               <div className="text-center p-4 bg-[#111111] rounded-lg border border-gray-800/50">
-                <div className="text-2xl font-semibold text-white mb-2">3</div>
+                <div className="text-2xl font-semibold text-white mb-2">6</div>
                 <div className="text-sm text-gray-400">Continents Lived</div>
               </div>
               <div className="text-center p-4 bg-[#111111] rounded-lg border border-gray-800/50">

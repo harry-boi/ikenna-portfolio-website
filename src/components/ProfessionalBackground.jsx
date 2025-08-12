@@ -35,9 +35,24 @@ const ProfessionalBackground = () => {
       description: "Cultural roots and early experience",
     },
     {
+      name: "Singapore",
+      flag: "🇸🇬",
+      description: "Gateway to Asia and global networking",
+    },
+    {
+      name: "Turkey",
+      flag: "🇹🇷",
+      description: "International exposure and growth",
+    },
+    {
+      name: "Dubai",
+      flag: "AE",
+      description: "International exposure and growth",
+    },
+    {
       name: "Thailand",
       flag: "🇹🇭",
-      description: "International exposure and growth",
+      description: "Cultural immersion and creative inspiration",
     },
     {
       name: "Australia",

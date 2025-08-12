@@ -168,7 +168,9 @@ const Footer = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span>www.afrosocialite.com</span>
+                <a href="https://afrosocialite.com" target="_blank">
+                  Afrosocialite Website
+                </a>
               </div>
             </div>
           </div>
@@ -178,7 +180,7 @@ const Footer = () => {
         <div className="border-t border-gray-800/50 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-500 text-sm">
-              © {currentYear} Ikenna Nwachukwu. All rights reserved.
+              © {currentYear} Ikenna Kingsley Nwachukwu. All rights reserved.
             </div>
           </div>
         </div>
