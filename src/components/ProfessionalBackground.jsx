@@ -59,6 +59,11 @@ const ProfessionalBackground = () => {
       flag: "🇦🇺",
       description: "Current home and business focus",
     },
+    {
+      name: "Fiji",
+      flag: "FJ",
+      description: "Tropical serenity and island inspiration",
+    },
   ];
 
   return (
